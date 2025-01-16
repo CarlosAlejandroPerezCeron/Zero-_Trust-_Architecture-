@@ -1,0 +1,11 @@
+{
+  "name": "Zero Trust",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "postCreateCommand": "pip install -r app/requirements.txt && cd frontend && npm install"
+}
