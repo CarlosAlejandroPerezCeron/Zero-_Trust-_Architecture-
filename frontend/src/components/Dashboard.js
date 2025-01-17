@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Container, Typography, Button } from "@mui/material";
 
 const API_URL = "http://localhost:8000";
 
@@ -19,10 +20,11 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>{message}</p>
-    </div>
+    <Container maxWidth="sm">
+      <Typography variant="h3">Welcome to Zero Trust Dashboard</Typography>
+      <Typography variant="h6">{message}</Typography>
+      <Button variant="contained" color="secondary" onClick={() => localStorage.removeItem("token")}>Logout</Button>
+    </Container>
   );
 };
 
