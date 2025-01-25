@@ -5,3 +5,5 @@ sqlite-utils
 structlog
 pytest
 httpx
+elasticsearch
+pyotp
